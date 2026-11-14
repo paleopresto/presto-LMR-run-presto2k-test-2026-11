@@ -436,7 +436,7 @@ jobs:
         # cfr loads it instead of downloading.
         run: |
           mkdir -p obs_data
-          gh release download obs-gpcc-v6 -R "${{ github.repository }}" -p GPCC_precip.mon.flux.1x1.v6.nc -D obs_data
+          gh release download obs-gpcc-v6 -R paleopresto/presto-LMR-run-presto2k-0_1_0 -p GPCC_precip.mon.flux.1x1.v6.nc -D obs_data
           echo "acc606137c70274d28bf3682466273aaa4316e22154a7b9306561b2942455a91  obs_data/GPCC_precip.mon.flux.1x1.v6.nc" | sha256sum -c -
         env:
           GH_TOKEN: ${{ github.token }}
